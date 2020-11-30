@@ -1,0 +1,91 @@
+.header {
+  padding: 1.2rem 15.9rem 0.9rem 12.7rem;
+  display: flex;
+  height: 7.2rem;
+  width: 100%;
+  background: $color-white;
+
+  &__logo-box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo-text {
+    font-size: 2.6rem;
+    font-weight: bold;
+    padding: 1rem;
+    &--1 {
+      color: $color-black;
+    }
+    &--2 {
+      color: $color-yellow-dark;
+    }
+  }
+
+  &__navs {
+    display: flex;
+    margin-left: 9rem;
+    > * {
+      font-size: 2rem;
+      font-weight: 400;
+      &:not(:last-child) {
+        margin-right: 4rem;
+      }
+    }
+  }
+
+  &__menu {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    &--text {
+      padding: 1rem 2rem;
+      font-size: 2rem;
+      color: $color-black;
+      font-weight: 400;
+    }
+
+    &--iconMain {
+      width: 5rem;
+      height: 5rem;
+      position: relative;
+    }
+
+    &--icon {
+      position: absolute;
+      top: 50%;
+      right: 30%;
+      transform: translate(-50%, -50%);
+      width: 2.6rem;
+      height: 2px;
+      background: $color-black;
+
+      &::before {
+        content: "\00a0\00a0";
+        width: 2.6rem;
+        height: 2px;
+        background: $color-black;
+        display: inline-block;
+        transform: translateY(-10px);
+      }
+
+      &::after {
+        content: "\00a0\00a0";
+        width: 2.6rem;
+        height: 2px;
+        background: $color-black;
+        display: inline-block;
+        transform: translateY(-44px);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .header {
+    &__navs {
+      margin-left: 16rem;
+    }
+  }
+}

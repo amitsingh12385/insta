@@ -1,0 +1,21 @@
+.messages {
+  &__main {
+    display: table;
+    width: 100%;
+    position: relative;
+  }
+
+  &__left {
+    width: 40%;
+    display: table-cell;
+    min-height: 100%;
+    background: $color-white;
+    border: 0.5px solid #C4C4C4;
+  }
+
+  &__right {
+    width: 60%;
+    display: table-cell;
+    vertical-align: top;
+  }
+}
